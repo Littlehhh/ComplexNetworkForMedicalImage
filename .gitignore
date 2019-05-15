@@ -1,0 +1,10 @@
+__pycache__/
+.idea/
+Pipfile.lock
+.DS_Store
+*.spec
+dist/
+build/
+*.nii.gz
+*.npy
+Program2/

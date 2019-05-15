@@ -11,6 +11,13 @@ sklearn = "*"
 networkx = "*"
 matplotlib = "*"
 nibabel = "*"
+scipy = "*"
+pandas = "*"
+pygraphviz = "*"
+pydot = "*"
+pyyaml = "*"
+nose = "*"
+gdal = "*"
 
 [requires]
 python_version = "3.6"
