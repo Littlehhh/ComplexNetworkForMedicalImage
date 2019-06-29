@@ -137,10 +137,8 @@ def build_complex_brain_network(file_name="CC0120_siemens_15_58_F_remove_skull_t
     return right_brain_patches, flip_left_brain_patches
 
 
-def compute_all_hippocampus():
-    file_list = listdir_with_postfix(
-        '/home/workshop/Data/medical_image_compute/Siemens15/Registration_Siemens15_Hippocampus',
-        '.nii.gz')
+def compute_all_hippocampus(path='/home/workshop/Data/medical_image_compute/Siemens15/Registration_Siemens15_Hippocampus'):
+    file_list = listdir_with_postfix(path,'.nii.gz')
     hipp_label_patches = np.ones((54432, 125))
     for file_name in file_list:
         print(os.path.basename(file_name) + ' start')
@@ -149,8 +147,8 @@ def compute_all_hippocampus():
     np.save('hipp_label_patches', hipp_label_patches)
 
 
-def compute_all_brain():
-    file_list = listdir_with_postfix('/home/workshop/Data/medical_image_compute/Siemens15/Registration_Siemens15',
+def compute_all_brain(path='/home/workshop/Data/medical_image_compute/Siemens15/Registration_Siemens15'):
+    file_list = listdir_with_postfix(path,
                                      '.nii.gz')
     ave_patches = np.zeros((54432, 125))
     for file_name in file_list:
